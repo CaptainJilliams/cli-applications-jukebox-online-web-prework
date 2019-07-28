@@ -46,7 +46,6 @@ end
 
 
 def run(songs)
-  #help
   command = ""
   while command
   puts "Please enter a command:"
