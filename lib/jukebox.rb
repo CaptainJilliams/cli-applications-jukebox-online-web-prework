@@ -25,19 +25,15 @@ def list(my_songs)
 end
 
 def play(my_songs)
-  puts "Please enter a song name:"
-  user_response = gets.chomp
-  my_songs.each { |song, location|
-    if user_response == song
-      system 'open ' + location
-    end
-      }
-  if user_response == "list"
-    list(my_songs)
-    play(my_songs)
+  puts "Please enter a song name or number:"
+  input = gets.chomp()
+  
+  if (1..9).to_a.index(input.to_i) != nil
+    puts "Playing #{my_songs[input.to_i - 1]}"
+  elsif my_songs.index(input) != nil
+    puts "Playing #{input}"
   else
-    puts "Invalid input, please try again:"
-    play(my_songs)
+    puts "Invalid input, please try again"
   end
 end
 
