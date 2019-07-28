@@ -28,7 +28,8 @@ def play(my_songs)
   puts "Please enter a song name or number:"
   user_choice = gets.chomp
 
-  
+  if (1..9).to_a.index(user_choice.to_i) != nil
+    
 
 end
 
