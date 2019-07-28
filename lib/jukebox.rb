@@ -32,7 +32,9 @@ def play(my_songs)
     puts "Playing #{my_songs[user_choice,to_i-1]}"
 elsif my_songs.index(user_choice) != nil
     puts "Playing #{user_choice}"
-
+  else
+    puts "Invalid input, please try again"
+  end
 end
 
 def exit_jukebox
