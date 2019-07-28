@@ -31,7 +31,7 @@ def play(my_songs)
   if (1..9).to_a.index(user_choice.to_i) != nil
     puts "Playing #{my_songs[user_choice,to_i-1]}"
 elsif my_songs.index(user_choice)
-  
+
 
 end
 
