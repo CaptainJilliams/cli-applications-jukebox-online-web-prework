@@ -31,7 +31,7 @@ def play(songs)
   if (1..9).to_a.include?(user_response.to_i)
     puts "Playing #{songs[user_response.to_i - 1]}"
   elsif songs.index(user_response.to_s) != nil
-    puts "Playing #{user_response}"
+    puts "Playing #{user_response.to_s}"
   else
     puts "Invalid input, please try again"
   end
