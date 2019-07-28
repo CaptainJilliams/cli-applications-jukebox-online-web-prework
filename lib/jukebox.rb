@@ -24,18 +24,18 @@ def list(my_songs)
   end
 end
 
-def play(my_songs)
+def play(songs)
   puts "Please enter a song name or number:"
-  user_choice = gets.chomp
+  user_response = gets.downcase.chomp
 
-  if (1..9).to_a.index(user_choice.to_i) != nil
-    puts "Playing #{my_songs[user_choice,to_i-1]}"
-elsif my_songs.index(user_choice) != nil
-    puts "Playing #{user_choice}"
+  if (1..9).to_a.include?(user_response.to_i)
+    puts "Playing #{songs[user_response.to_i - 1]}"
+    elsif songs.include?(user_response)
+    puts "Playing #{user_response}"
   else
     puts "Invalid input, please try again"
   end
-end
+end 
 
 def exit_jukebox
   puts "Goodbye"
